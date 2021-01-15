@@ -1,25 +1,23 @@
 public abstract class Animal {
-    private int animalQuantity = 0;
+    private static int animalQuantity = 0;
     private String name;
 
      public abstract void swim(int distance);
 
     public abstract void run(int distance);
 
-    public abstract void quantity();
+    public abstract void printQuantity();
 
     public Animal(String name) {
         this.name = name;
         animalQuantity++;
+ //       return animalQuantity;
     }
 
-    public void animalQuantity(){
-        System.out.println("Бфло созданно " + animalQuantity + " животных.");
+    public void printAnimalQuantity() {
+        System.out.println("Было созданно " + animalQuantity + " животных.");
     }
 
-    public int getAnimalQuantity() {
-        return animalQuantity;
-    }
 
     public String getName() {
         return name;
